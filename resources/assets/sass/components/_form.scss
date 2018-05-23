@@ -1,0 +1,94 @@
+.form {
+	width: 696px;
+
+	form {
+		background: white;
+		padding: 4px;
+		box-sizing: border-box;
+		border-radius: 10px;
+		@include boxShadow(0px, 0px, 20px, rgba(0,0,0,0.4));
+	}
+
+	@include e(stage) {
+		background-color: $grey;
+		border-radius: 10px;
+		margin-bottom: 4px;
+
+		&:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+
+	@include e(fields-wrapper) {
+		height: 196px;
+	}
+
+	@include e(fields) {
+		padding: 10px;
+		box-sizing: border-box;
+		position: relative;
+		height: 100%;
+
+		button {
+			@include linearGradient(#404bb6, #7463d1);
+			color: white;
+			width: 128px;
+			padding: 8px;
+			box-sizing: border-box;
+			border-radius: 8px;
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			cursor: pointer;
+		}
+
+		label {
+			display: block;
+			font-weight: 600;
+			margin: 6px 0px;
+		}
+
+		input[type="text"], textarea {
+			border-radius: 8px;
+			border: none;
+			box-sizing: border-box;
+			padding: 10px;
+			@include boxShadow(0px, 0px, 10px, rgba(0,0,0,0.5), true);
+		}
+
+		input[type="text"] {
+			width: 208px;
+
+			&.small {
+				width: 48px;
+			}
+		}
+
+		textarea {
+			max-height: 145px;
+			width: 390px;
+			max-width: 390px;
+		}
+	}
+
+	@include e(header) {
+		@include linearGradient(#ffc500, #eea20e);
+		padding: 20px 16px;
+		border-radius: 10px;
+
+		h4 {
+			margin: 0;
+			color: white;
+			font-weight: 400;
+			text-shadow: 1px 1px #686868;
+		}
+	}
+
+	@include e(flex){
+		display: flex;
+
+		.form__field-wrapper:first-child {
+			margin-right: 10px;
+		}
+	}
+}

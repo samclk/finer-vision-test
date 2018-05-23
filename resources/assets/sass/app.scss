@@ -1,0 +1,27 @@
+// Variables
+@import "variables";
+
+// Mixins
+@import "mixins";
+
+// Normalize.css
+@import "~normalize.css/normalize.css";
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: $body-bg;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+// Components
+@import "components/form";
+@import "components/errors";
+@import "components/success";
